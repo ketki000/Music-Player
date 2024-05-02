@@ -1,0 +1,775 @@
+<!-- CODED BY KETKI PATIL -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Relevent meta information - for language, responsivity, version -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- imcluding google fonts via cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <!-- for main CSS  -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- for handling all media queries -->
+  <link rel="stylesheet" href="media.css" />
+  <!--cdn link for animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>🎸 Ketki's Music Player</title>
+</head>
+
+<body>
+  <!-- header section -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assets/ninja-studio.png" alt="ninja-studio-img" />
+      </div>
+      <div class="fav">
+        <p class="animate__animated animate__swing animate__infinite">Favourites</p>
+      </div>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search" />
+        <i class="fas fa-microphone"></i>
+      </div>
+      <div class="notification">
+        <i class="fas bell fa-bell"></i>
+      </div>
+      <div class="user-profile-logo">
+        <img src="assets/user-profile-pic.png" alt="user-logo" />
+      </div>
+    </nav>
+  </header>
+  <!-- main section - Carousal and songs  list-->
+  <main>
+    <!-- main section consists of playlist and aside in flex style -->
+    <div class="playlist">
+      <!-- Functional Carousal -->
+      <div class="carousel">
+        <div class="slide-container">
+          <!-- Slide 1 -->
+          <div class="slide">
+            <!-- Playlist-Card-Pic -->
+            <div class="playlist-card-pic"><img src="assets/artist1.png" alt="artist1-pic"></div>
+            <!-- Playlist-Card-Content -->
+            <div class="playlist-card-content">
+              <div>
+                <span class="artist-name">Ariana Grande</span><span class="followers">851 Followers</span>
+              </div>
+              <p class="band-loc">British Band</p>
+              <p class="band-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eum molestiae
+                repellendus, architecto rerum praesentium, delectus laudantium maxime voluptatibus recusandae numquam
+                suscipit animi alias deleniti impedit harum provident voluptates totam.
+              </p>
+              <div>
+                <button class="play-all-btn">Play All</button>
+                <button class="follow-btn">Follow</button>
+              </div>
+              <p class="p5">247 Tracks | 128 Albums</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <div class="playlist-card-pic"><img src="assets/artist2.png" alt="artist1-pic"></div>
+            <div class="playlist-card-content">
+              <div>
+                <span class="artist-name">Ed Sheeran</span><span class="followers">851 Followers</span>
+              </div>
+              <p class="band-loc">British Band</p>
+              <p class="band-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eum molestiae
+                repellendus, architecto rerum praesentium, delectus laudantium maxime voluptatibus recusandae numquam
+                suscipit animi alias deleniti impedit harum provident voluptates totam.
+              </p>
+              <div>
+                <button class="play-all-btn">Play All</button>
+                <button class="follow-btn">Follow</button>
+              </div>
+              <p class="p5">247 Tracks | 128 Albums</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+            <div class="playlist-card-pic"><img src="assets/artist3.png" alt="artist1-pic"></div>
+            <div class="playlist-card-content">
+              <div>
+                <span class="artist-name">Justin Beiber</span><span class="followers">851 Followers</span>
+              </div>
+              <p class="band-loc">British Band</p>
+              <p class="band-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim eum molestiae
+                repellendus, architecto rerum praesentium, delectus laudantium maxime voluptatibus recusandae numquam
+                suscipit animi alias deleniti impedit harum provident voluptates totam.
+              </p>
+              <div>
+                <button class="play-all-btn">Play All</button>
+                <button class="follow-btn">Follow</button>
+              </div>
+              <p class="p5">247 Tracks | 128 Albums</p>
+            </div>
+          </div>
+
+        </div>
+        <!-- Previous and Next buttons for sliding Carousal, functionality covered in app.js -->
+        <button class="carousel-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"
+            style="color: #ffffff;"></i></button>
+        <button class="carousel-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"
+            style="color: #ffffff;"></i></button>
+
+      </div>
+      <!-- Playlist Songs Queue -->
+      <div class="songs-queue">
+        <div class="song-element-container">
+          <!-- Playlist Song 1 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">01</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/queue-song-1.png" alt="" />
+
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">Positions</p>
+                <p class="queue-artist-name">Ariana Grande</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 2 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">02</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/queue-song-2.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">Stuck with you</p>
+                <p class="queue-artist-name">Justin Beiber</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 3 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">03</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/similar-song-4.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">Intentions</p>
+                <p class="queue-artist-name">Justin Bieber</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 4 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">04</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/queue-song-1.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">7 Rings</p>
+                <p class="queue-artist-name">Ariana Grande</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 5 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">05</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/queue-song-2.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">Breathin</p>
+                <p class="queue-artist-name">Ariana Grande</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 6 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">06</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/queue-song-3.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">Blank Swift</p>
+                <p class="queue-artist-name">Taylor shwift</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 7 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">07</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/similar-song-6.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">We r Good</p>
+                <p class="queue-artist-name">Dua Lipa</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 8 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">08</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/queue-song-2.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">Shape of Your</p>
+                <p class="queue-artist-name">ED sheerna</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 9 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">09</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/queue-song-3.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">New Skin</p>
+                <p class="queue-artist-name">Flume</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+          <!-- Playlist Song 10 -->
+          <div class="song-element">
+            <!-- song-image with play button on hovering-->
+            <div class="song-image-container">
+              <!-- Song No. -->
+              <p class="queue-number">10</p>
+              <div class="image-container">
+                <img class="queue-song-img" src="./assets/similar-song-4.png" alt="" />
+                <i class="fas play-btn fa-play"> </i>
+              </div>
+              <!-- Song name and artist name -->
+              <div class="song-and-artist-container">
+                <p class="queue-song-name">Worry about us</p>
+                <p class="queue-artist-name">Rowsie Lowsie</p>
+              </div>
+            </div>
+            <!-- Like button and add to queue button -->
+            <div class="icons-container">
+              <i class="far wishlist-icon fa-heart"></i>
+              <i class="fas add-icon fa-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- aside section - consists of Similar artist songs section and Recently played songs section-->
+  <aside>
+    <!-- Similar Artist section  -->
+    <div class="similar-artist-container">
+      <!-- Similar Artist section header-->
+      <div class="similar-artist-header">
+        <p>Similar Artists</p>
+        <a href="">View All</a>
+      </div>
+      <!-- Similar Artist songs card collection -->
+      <div class="similar-artist-card-container">
+        <!-- Similar artist song 1 -->
+        <div class="similar-artist-card">
+          <!-- Container for img and play, pause button which will be visible over the image or songs logo-->
+          <div class="song-name-img-container">
+            <div class="similar-artist-img-container">
+              <label for="play-btn-checkbox1"><i class="fas similar-artist-play-btn fa-play play-1"></i>
+                <i class="similar-artist-pause-btn fas fa-pause pause-1"></i></label>
+            </div>
+            <!-- Song name and release date -->
+            <div>
+              <p class="song-name">Radio</p>
+              <p class="date">AUG 11, 2023</p>
+            </div>
+          </div>
+          <!--Enabling Dropdown on hovering over 3 dots icon, where play now and add to queue options will be displayed -->
+          <div class="similar-artist-dropdown-container">
+            <label for="similar-artist-checkbox1"><i class="fas more-details fa-ellipsis-h"></i></label>
+            <input type="checkbox" id="similar-artist-checkbox1" />
+            <div class="similar-artist-dropdown">
+              <!-- container for links in the dropdown -->
+              <div class="links-container">
+                <i class="fas fa-play"></i>
+                <a href="">Play Now</a>
+              </div>
+
+              <hr />
+
+              <div class="links-container">
+                <i class="fas fa-plus"></i>
+                <a href="">Add To Queue</a>
+              </div>
+
+              <hr />
+
+            </div>
+            <!-- song duration -->
+            <p class="time">2:56</p>
+          </div>
+        </div>
+        <!-- Similar artist song 2 -->
+        <div class="similar-artist-card">
+          <!-- Container for img and play, pause button which will be visible over the image or songs logo-->
+          <div class="song-name-img-container">
+            <div class="similar-artist-img-container">
+              <label for="play-btn-checkbox1"><i class="fas similar-artist-play-btn fa-play play-1"></i>
+                <i class="similar-artist-pause-btn fas fa-pause pause-1"></i></label>
+            </div>
+            <!-- Song name and release date -->
+            <div>
+              <p class="song-name">Attention</p>
+              <p class="date">AUG 11, 2023</p>
+            </div>
+          </div>
+          <!--Enabling Dropdown on hovering over 3 dots icon, where play now and add to queue options will be displayed -->
+          <div class="similar-artist-dropdown-container">
+            <label for="similar-artist-checkbox1"><i class="fas more-details fa-ellipsis-h"></i></label>
+            <input type="checkbox" id="similar-artist-checkbox1" />
+            <div class="similar-artist-dropdown">
+              <!-- container for links in the dropdown -->
+              <div class="links-container">
+                <i class="fas fa-play"></i>
+                <a href="">Play Now</a>
+              </div>
+
+              <hr />
+
+              <div class="links-container">
+                <i class="fas fa-plus"></i>
+                <a href="">Add To Queue</a>
+              </div>
+
+              <hr />
+
+
+            </div>
+            <!-- song duration -->
+            <p class="time">4:56</p>
+          </div>
+        </div>
+        <!-- Similar artist song 3 -->
+        <div class="similar-artist-card">
+          <!-- Container for img and play, pause button which will be visible over the image or songs logo-->
+          <div class="song-name-img-container">
+            <div class="similar-artist-img-container">
+              <label for="play-btn-checkbox1"><i class="fas similar-artist-play-btn fa-play play-1"></i>
+                <i class="similar-artist-pause-btn fas fa-pause pause-1"></i></label>
+            </div>
+            <!-- Song name and release date -->
+            <div>
+              <p class="song-name">Light Switch</p>
+              <p class="date">AUG 11, 2017</p>
+            </div>
+          </div>
+          <!--Enabling Dropdown on hovering over 3 dots icon, where play now and add to queue options will be displayed -->
+          <div class="similar-artist-dropdown-container">
+            <label for="similar-artist-checkbox1"><i class="fas more-details fa-ellipsis-h"></i></label>
+            <input type="checkbox" id="similar-artist-checkbox1" />
+            <div class="similar-artist-dropdown">
+              <!-- container for links in the dropdown -->
+              <div class="links-container">
+                <i class="fas fa-play"></i>
+                <a href="">Play Now</a>
+              </div>
+
+              <hr />
+
+              <div class="links-container">
+                <i class="fas fa-plus"></i>
+                <a href="">Add To Queue</a>
+              </div>
+
+              <hr />
+
+            </div>
+            <!-- song duration -->
+            <p class="time">5:08</p>
+          </div>
+        </div>
+        <!-- Similar artist song 4 -->
+        <div class="similar-artist-card">
+          <!-- Container for img and play, pause button which will be visible over the image or songs logo-->
+          <div class="song-name-img-container">
+            <div class="similar-artist-img-container">
+              <label for="play-btn-checkbox1"><i class="fas similar-artist-play-btn fa-play play-1"></i>
+                <i class="similar-artist-pause-btn fas fa-pause pause-1"></i></label>
+            </div>
+            <!-- Song name and release date -->
+            <div>
+              <p class="song-name">Stereo Again</p>
+              <p class="date">JAN 08, 2010</p>
+            </div>
+          </div>
+          <!--Enabling Dropdown on hovering over 3 dots icon, where play now and add to queue options will be displayed -->
+          <div class="similar-artist-dropdown-container">
+            <label for="similar-artist-checkbox1"><i class="fas more-details fa-ellipsis-h"></i></label>
+            <input type="checkbox" id="similar-artist-checkbox1" />
+            <div class="similar-artist-dropdown">
+              <!-- container for links in the dropdown -->
+              <div class="links-container">
+                <i class="fas fa-play"></i>
+                <a href="">Play Now</a>
+              </div>
+
+              <hr />
+
+              <div class="links-container">
+                <i class="fas fa-plus"></i>
+                <a href="">Add To Queue</a>
+              </div>
+
+              <hr />
+
+            </div>
+            <!-- song duration -->
+            <p class="time">1:49</p>
+          </div>
+        </div>
+        <!-- Similar artist song 5 -->
+        <div class="similar-artist-card">
+          <!-- Container for img and play, pause button which will be visible over the image or songs logo-->
+          <div class="song-name-img-container">
+            <div class="similar-artist-img-container">
+              <label for="play-btn-checkbox1"><i class="fas similar-artist-play-btn fa-play play-1"></i>
+                <i class="similar-artist-pause-btn fas fa-pause pause-1"></i></label>
+            </div>
+            <!-- Song name and release date -->
+            <div>
+              <p class="song-name">Superman</p>
+              <p class="date">AUG 14, 2022</p>
+            </div>
+          </div>
+          <!--Enabling Dropdown on hovering over 3 dots icon, where play now and add to queue options will be displayed -->
+          <div class="similar-artist-dropdown-container">
+            <label for="similar-artist-checkbox1"><i class="fas more-details fa-ellipsis-h"></i></label>
+            <input type="checkbox" id="similar-artist-checkbox1" />
+            <div class="similar-artist-dropdown">
+              <!-- container for links in the dropdown -->
+              <div class="links-container">
+                <i class="fas fa-play"></i>
+                <a href="">Play Now</a>
+              </div>
+
+              <hr />
+
+              <div class="links-container">
+                <i class="fas fa-plus"></i>
+                <a href="">Add To Queue</a>
+              </div>
+
+              <hr />
+              <hr />
+            </div>
+            <!-- song duration -->
+            <p class="time">3:24</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section for recently played songs -->
+    <div id="recently-played" class="recently-queue-container">
+      <!-- Recently Played songs header -->
+      <div class="recent-song-queue-header">
+        <p>Recently Played</p>
+        <div class="recent-view-all">
+          <a href>View All</a>
+        </div>
+      </div>
+      <!-- Recently played songs list container -->
+      <div class="recent-songs-container">
+        <!-- Recently played song 1 -->
+        <div id="recent-song-element-2" class="recent-song-element-1">
+          <!-- Recently played song image conatiner with song number, img and play button, that appears on hovering over song icon -->
+          <div class="song-image-container">
+            <p class="queue-number">01</p>
+            <div class="image-container">
+              <img src="./assets/similar-song-3.png" alt="" class="queue-song-img" />
+              <i class="fas play-btn fa-play"></i>
+            </div>
+            <!-- song info -->
+            <div class="song-and-artist-container">
+              <p class="queue-song-name">Sugar</p>
+              <p class="queue-artist-name">Maroon 5</p>
+            </div>
+          </div>
+          <!-- icon for liking song -->
+          <i class="far wishlist-icon fa-heart"></i>
+        </div>
+        <!-- Recently played song 2 -->
+        <div id="recent-song-element-2" class="recent-song-element-1">
+          <!-- Recently played song image conatiner with song number, img and play button, that appears on hovering over song icon -->
+          <div class="song-image-container">
+            <p class="queue-number">02</p>
+            <div class="image-container">
+              <img src="./assets/similar-song-1.png" alt="" class="queue-song-img" />
+              <i class="fas play-btn fa-play"></i>
+            </div>
+            <!-- song info -->
+            <div class="song-and-artist-container">
+              <p class="queue-song-name">Starboy</p>
+              <p class="queue-artist-name">Weekend</p>
+            </div>
+          </div>
+          <!-- icon for liking song -->
+          <i class="far wishlist-icon fa-heart"></i>
+        </div>
+        <!-- Recently played song 3 -->
+        <div id="recent-song-element-2" class="recent-song-element-1">
+          <!-- Recently played song image conatiner with song number, img and play button, that appears on hovering over song icon -->
+          <div class="song-image-container">
+            <p class="queue-number">03</p>
+            <div class="image-container">
+              <img src="./assets/similar-song-2.png" alt="" class="queue-song-img" />
+              <i class="fas play-btn fa-play"></i>
+            </div>
+            <!-- song info -->
+            <div class="song-and-artist-container">
+              <p class="queue-song-name">34 + 35</p>
+              <p class="queue-artist-name">Ariana Grande</p>
+            </div>
+          </div>
+          <!-- icon for liking song -->
+          <i class="far wishlist-icon fa-heart"></i>
+        </div>
+        <!-- Recently played song 4 -->
+        <div id="recent-song-element-2" class="recent-song-element-1">
+          <!-- Recently played song image conatiner with song number, img and play button, that appears on hovering over song icon -->
+          <div class="song-image-container">
+            <p class="queue-number">04</p>
+            <div class="image-container">
+              <img src="./assets/similar-song-3.png" alt="" class="queue-song-img" />
+              <i class="fas play-btn fa-play"></i>
+            </div>
+            <!-- song info -->
+            <div class="song-and-artist-container">
+              <p class="queue-song-name"> Photograph</p>
+              <p class="queue-artist-name">Ed Sheeran</p>
+            </div>
+          </div>
+          <!-- icon for liking song -->
+          <i class="far wishlist-icon fa-heart"></i>
+        </div>
+        <!-- Recently played song 5 -->
+        <div id="recent-song-element-2" class="recent-song-element-1">
+          <!-- Recently played song image conatiner with song number, img and play button, that appears on hovering over song icon -->
+          <div class="song-image-container">
+            <p class="queue-number">05</p>
+            <div class="image-container">
+              <img src="./assets/similar-song-1.png" alt="" class="queue-song-img" />
+              <i class="fas play-btn fa-play"></i>
+            </div>
+            <!-- song info -->
+            <div class="song-and-artist-container">
+              <p class="queue-song-name">Havana</p>
+              <p class="queue-artist-name">Camilla Cabello</p>
+            </div>
+          </div>
+          <!-- icon for liking song -->
+          <i class="far wishlist-icon fa-heart"></i>
+        </div>
+        <!-- Recently played song 6 -->
+        <div id="recent-song-element-2" class="recent-song-element-1">
+          <!-- Recently played song image conatiner with song number, img and play button, that appears on hovering over song icon -->
+          <div class="song-image-container">
+            <p class="queue-number">06</p>
+            <div class="image-container">
+              <img src="./assets/similar-song-2.png" alt="" class="queue-song-img" />
+              <i class="fas play-btn fa-play"></i>
+            </div>
+            <!-- song info -->
+            <div class="song-and-artist-container">
+              <p class="queue-song-name">Galway Girl</p>
+              <p class="queue-artist-name">Ed Sheeran</p>
+            </div>
+          </div>
+          <!-- icon for liking song -->
+          <i class="far wishlist-icon fa-heart"></i>
+        </div>
+        <!-- Recently played song 7 -->
+        <div id="recent-song-element-2" class="recent-song-element-1">
+          <!-- Recently played song image conatiner with song number, img and play button, that appears on hovering over song icon -->
+          <div class="song-image-container">
+            <p class="queue-number">07</p>
+            <div class="image-container">
+              <img src="./assets/similar-song-3.png" alt="" class="queue-song-img" />
+              <i class="fas play-btn fa-play"></i>
+            </div>
+            <!-- song info -->
+            <div class="song-and-artist-container">
+              <p class="queue-song-name">Flowers</p>
+              <p class="queue-artist-name">Miley Cyrus</p>
+            </div>
+          </div>
+          <!-- icon for liking song -->
+          <i class="far wishlist-icon fa-heart"></i>
+        </div>
+
+
+
+      </div>
+    </div>
+  </aside>
+  </main>
+
+  <!-- footer section - Bottom Music Player -->
+  <footer>
+    <!-- Information about song which is currently running in player -->
+    <div id="footer-song-info">
+      <div id="footer-song-image">
+        <img class="song-name-image" src="./assets/queue-song-3.png" alt="" />
+      </div>
+      <div id="footer-song-name">
+        <span id="dangerous-woman">Dangerous Woman</span>
+        <span class="subtitle">Ariana Grande</span>
+      </div>
+      <div>
+        <!-- can like or remove song -->
+        <span>
+          <i class="far fa-heart subtitle"></i>
+        </span>
+        <span>
+          <i class="fas fa-ban subtitle"></i>
+        </span>
+      </div>
+    </div>
+    <!-- Main player section -->
+    <div id="player">
+      <!-- Controls for music player -->
+      <div id="player-control">
+        <!-- Shuffle icon -->
+        <div><i class="fas fa-random"></i></div>
+        <!-- Previous song icon -->
+        <div><i class="fas fa-step-backward"></i></div>
+        <!-- Pause/Resume the song -->
+        <div>
+          <i class="far fa-pause-circle" style="font-size: 2rem"></i>
+        </div>
+        <!-- Next song -->
+        <div><i class="fas fa-step-forward"></i></div>
+        <!-- Restart same song -->
+        <div><i class="fas fa-redo"></i></div>
+      </div>
+      <!-- Duration upto which song has been played and slider in correspondance to that -->
+      <div id="player-slider-container">
+        <div class="subtitle">2:01</div>
+
+        <input type="range" min="0" max="100" value="56" />
+        <!-- total duration of song -->
+        <div class="subtitle">3:12</div>
+      </div>
+    </div>
+    <!-- Extra controls -->
+    <div class="player-extras">
+      <div>
+        <i class="fas fa-list-ul"></i>
+      </div>
+      <div>
+        <i class="fas fa-laptop"></i>
+      </div>
+      <!-- Set the volume -->
+      <div class="volume-container">
+        <span><i class="fas fa-volume-up"></i></span>
+        <input type="range" min="0" max="100" value="50" class="slider" id="volume-slider" />
+      </div>
+      <!-- Fullscreen -->
+      <div><i class="fas fa-expand"></i></div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/008b72e582.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+
+
+</html>

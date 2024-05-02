@@ -1,0 +1,131 @@
+ /* CODED BY KETKI PATIL  */
+/* Media Queries for inducing responsivity in the music player to avoid breaking of screen*/
+
+/* Breakpoints considered here - 1124px(laptop/large device screen), 860px(iPad screen) and 576px(mobile screen) */
+/* Coded using destop first approach */
+
+/* 1124px width and more */
+@media screen and (max-width: 1124px) {
+  html {
+    font-size: 15px;
+  }
+  main {
+    margin: 2rem;
+  }
+  .playlist {
+    width: 65%;
+  }
+  .slide {
+    width: 90%;
+  }
+  aside {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+  }
+  .playlist-card-content {
+    margin-top: 0;
+  }
+  .band-info{
+    padding-right: 1.5rem;
+  }
+  .followers{
+    padding-right: 2.5rem;
+  }
+}
+/* 860px width and more  */
+@media screen and (max-width: 860px) {
+  html {
+    font-size: 14px;
+  }
+  .logo img {
+    width: 14vw;
+    height: 8vh;
+  }
+  /* user profile pic */
+  .user-profile-logo img {
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  }
+  .search-box {
+    width: 40%;
+  }
+  .slide{
+    display: block;
+  }
+  /* shifting playlist card content beneath img i.e making it block */
+  .playlist-card-pic {
+    width: 100%;
+    margin: 0 auto;
+    height: 50%;
+  }
+  .playlist-card-content {
+    width: 100%;
+  }
+
+}
+/* 576px width and more  */
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    margin-right: 1rem;
+  }
+
+  .logo img {
+    width: 15vw;
+    height: 8vh;
+    margin-right: 20px;
+  }
+  .fav {
+    margin-right: 20px;
+  }
+  /* user profile pic */
+  .user-profile-logo img {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3);
+  }
+  .search-box {
+    width: 30%;
+  }
+  /* shifting aside section beneath playlist section */
+  main {
+    display: block;
+    box-sizing: border-box;
+    width: 95%;
+    padding: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+  }
+  .playlist {
+    width: 100%;
+    overflow-y: visible;
+  }
+  .playlist-card-content {
+    display: none;
+  }
+  /* playlist card img will cover the whole card space*/
+  .playlist-card-pic {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .carousel {
+    height: 30vh;
+  }
+  aside {
+    width: 100%;
+    position: static;
+  }
+  .latest-release-header a {
+    margin-right: 1rem;
+  }
+  #recently-played {
+    width: 90%;
+  }
+}
